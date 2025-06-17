@@ -45,7 +45,11 @@ function render(variables = {}) {
             variables.country == null ? "/ Your country" : variables.country
           }</h3>
          
-            <ul class="position-right">
+           <ul class="${
+             variables.socialMediaPosition === "left"
+               ? "position-left"
+               : "position-right"
+           }">
             <li><a href="${
               variables.twitter
                 ? ` https://twitter.com/${variables.twitter}`
